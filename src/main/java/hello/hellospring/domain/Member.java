@@ -1,6 +1,13 @@
 package hello.hellospring.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;        //고객이 정하는 id가 아닌 시스템이 지정하는 id
     private String name;    //고객이 입력한 이름
 
